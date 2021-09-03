@@ -1,4 +1,4 @@
-# Airquality sensor with Pico Esp01 SGP30
+# Air quality sensor with Pico Esp01 SGP30
 
 An air quality sensor. 
 - Components: Raspberry Pico, ESP-01, SGP30 (from Adafruit)
@@ -19,7 +19,7 @@ RPi Pico: https://www.raspberrypi.org/products/raspberry-pi-pico/
 - I bought the cheapest but that missed pre-soldered pins, so for development I also bought one with this
 
 ESP01 1Mb: https://www.tinytronics.nl/shop/nl/communicatie-en-signalen/draadloos/wi-fi/modules/esp8266-wifi-module-esp-01s-1mb
-- I was (and am still) a noob when it comes to ESP's, but I am catching up
+- I was (and still am) a noob when it comes to ESP's, but I am catching up
 - 1 Mb is needed to load the Micropython image
 
 ## Getting Started

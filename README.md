@@ -28,6 +28,7 @@ Components used:
 ### Wiring
 
 I will provide a schema when finished with testing :-)
+
 ![](pico-esp-sgp30.jpg)
 
 ### Dependencies

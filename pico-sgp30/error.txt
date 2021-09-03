@@ -1,0 +1,1 @@
+Error: <class 'AttributeError'>'str' object has no attribute 'decode'

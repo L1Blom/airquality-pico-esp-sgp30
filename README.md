@@ -8,7 +8,7 @@ An air quality sensor.
 ## Description
 
 This project was my first makers project. 
-I order a Rapsberry Pico and thought about: what is a nice starters project beside the blinking leds.
+I ordered a Rapsberry Pico and thought about: what is a nice starters project beside the blinking leds.
 My wife had already asked for a sensor for air quality, and that looked a nice and small starters project.
 
 Components used:

@@ -12,25 +12,30 @@ I ordered a Rapsberry Pico and thought about: what is a nice starters project be
 My wife had already asked for a sensor for air quality, and that looked a nice and small starters project.
 
 Components used:
-SGP30: https://shop.pimoroni.com/products/sgp30-air-quality-sensor-breakout
+
+**SGP30**: https://shop.pimoroni.com/products/sgp30-air-quality-sensor-breakout
 - There are also break-out versions with micro-USB or pre-soldered pins. 
 
-RPi Pico: https://www.raspberrypi.org/products/raspberry-pi-pico/
+**RPi Pico**: https://www.raspberrypi.org/products/raspberry-pi-pico/
 - I bought the cheapest but that missed pre-soldered pins, so for development I also bought one with this
 
-ESP01 1Mb: https://www.tinytronics.nl/shop/nl/communicatie-en-signalen/draadloos/wi-fi/modules/esp8266-wifi-module-esp-01s-1mb
+**ESP01 1Mb**: https://www.tinytronics.nl/shop/nl/communicatie-en-signalen/draadloos/wi-fi/modules/esp8266-wifi-module-esp-01s-1mb
 - I was (and still am) a noob when it comes to ESP's, but I am catching up
 - 1 Mb is needed to load the Micropython image
 
 ## Getting Started
 
+### Wiring
+
+I will provide a schema when finished with testing :-)
+
 ### Dependencies
 
-Pico: Micropython version out-of-the-box, I haven't used any special things. I2C and Serial only
+**Pico**: Micropython version out-of-the-box, I haven't used any special things. I2C and Serial only
 
-ESP-01: I flashed it with esp8266-1m-20210618-v1.16.bin
+**ESP-01**: I flashed it with esp8266-1m-20210618-v1.16.bin
 
-SGP30: please note:
+**SGP30**: please note:
 - I found a library which turned out a little bit old (the latest versions from Adafruit can be found on their site). 
 - But because I am not used to all the dependencies of Adafruit and CircuitPython, I still uses that older version. 
 - Mainly because it works pretty much on its own with no specific dependencies. and it needed a small change, see contents.
@@ -40,13 +45,13 @@ It needs a MQTT server to post the output of the sensor. Topics are SGP30 voor m
 
 ### Installing
 
-ESP-01: 
+**ESP-01**: 
 - Flash with Micropython
 - Copy all the files to the root of the device
 - Update the secrets.py to set your SSID and password and the mqtt server
 - Boot
 
-Pico:
+**Pico**:
 - Copy all the files to the root of the device
 - Boot
 
@@ -78,7 +83,7 @@ Leen Blom
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE.md file for details
+[MIT](https://choosealicense.com/licenses/mit/)
 
 ## Acknowledgments
 

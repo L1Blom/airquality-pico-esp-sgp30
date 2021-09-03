@@ -28,12 +28,13 @@ Components used:
 ### Wiring
 
 I will provide a schema when finished with testing :-)
+![](pico-esp-sgp30.jpg)
 
 ### Dependencies
 
 **Pico**: Micropython version out-of-the-box, I haven't used any special things. I2C and Serial only
 
-**ESP-01**: I flashed it with esp8266-1m-20210618-v1.16.bin
+**ESP-01**: I flashed it with esp8266-1m-20210618-v1.16.bin from [micropython.org](https://micropython.org/download/esp8266/)
 
 **SGP30**: please note:
 - I found a library which turned out a little bit old (the latest versions from Adafruit can be found on their site). 

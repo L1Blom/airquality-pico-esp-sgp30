@@ -1,6 +1,4 @@
-# airquality-pico-esp-sgp30
-
-# Project Title
+# Airquality sensor with Pico Esp01 SGP30
 
 An air quality sensor. 
 - Components: Raspberry Pico, ESP-01, SGP30 (from Adafruit)
@@ -16,8 +14,10 @@ My wife had already asked for a sensor for air quality, and that looked a nice a
 Components used:
 SGP30: https://shop.pimoroni.com/products/sgp30-air-quality-sensor-breakout
 - There are also break-out versions with micro-USB or pre-soldered pins. 
+
 RPi Pico: https://www.raspberrypi.org/products/raspberry-pi-pico/
 - I bought the cheapest but that missed pre-soldered pins, so for development I also bought one with this
+
 ESP01 1Mb: https://www.tinytronics.nl/shop/nl/communicatie-en-signalen/draadloos/wi-fi/modules/esp8266-wifi-module-esp-01s-1mb
 - I was (and am still) a noob when it comes to ESP's, but I am catching up
 - 1 Mb is needed to load the Micropython image
@@ -27,7 +27,9 @@ ESP01 1Mb: https://www.tinytronics.nl/shop/nl/communicatie-en-signalen/draadloos
 ### Dependencies
 
 Pico: Micropython version out-of-the-box, I haven't used any special things. I2C and Serial only
+
 ESP-01: I flashed it with esp8266-1m-20210618-v1.16.bin
+
 SGP30: please note:
 - I found a library which turned out a little bit old (the latest versions from Adafruit can be found on their site). 
 - But because I am not used to all the dependencies of Adafruit and CircuitPython, I still uses that older version. 

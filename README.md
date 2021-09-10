@@ -27,7 +27,7 @@ Components used:
 
 ### Wiring
 
-I will provide a schema when finished with testing :-)
+Schematics see file: airquality-sensor.fzz
 
 ![](airquality-pico-esp-sgp30.jpg)
 

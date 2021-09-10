@@ -29,7 +29,7 @@ Components used:
 
 I will provide a schema when finished with testing :-)
 
-![](pico-esp-sgp30.jpg)
+![](airquality-pico-esp-sgp30.jpg)
 
 ### Dependencies
 
@@ -63,7 +63,7 @@ If correctly wired, the electronics should post messages on mqtt:
 - Topic: SGP30, value: "t:<co2eq>:<tvov>" example: "t:400,5"  
 - Topic: SGP30_mgt: value: "m:<mem>:<cycle>" example: "m:20560,13"
 
-The SGP30_mgt was introduced to find a memory leak. After propoerly using the garbage collector, it works ok now.
+The SGP30_mgt was introduced to find a memory leak. After properly using the garbage collector, it works ok now.
 Internally it measures the amount of memory used and if more than 20k bytes, it starts gc. 
 The counter shows how many cycles before gc is started. 
 To make it fail safe, it reboots is cycle counter is 1 (I've never seen this happen).

@@ -8,8 +8,8 @@ An air quality sensor.
 ## Description
 
 This project was my first makers project. 
-I ordered a Rapsberry Pico and thought about: what is a nice starters project beside the blinking leds.
-My wife had already asked for a sensor for air quality, and that looked a nice and small starters project.
+I ordered a Rapsberry Pico and thought about: what is a nice starter project beside the blinking leds.
+My wife had already asked for a sensor for air quality, and that looked a nice and small project.
 
 Components used:
 
@@ -27,7 +27,7 @@ Components used:
 
 ### Wiring
 
-Schematics see file: airquality-sensor.fzz
+[Schematics see file](airquality-sensor.fzz)
 
 ![](airquality-pico-esp-sgp30.jpg)
 
@@ -36,11 +36,12 @@ Schematics see file: airquality-sensor.fzz
 **Pico**: Micropython version out-of-the-box, I haven't used any special things. I2C and Serial only
 
 **ESP-01**: I flashed it with esp8266-1m-20210618-v1.16.bin from [micropython.org](https://micropython.org/download/esp8266/)
+- Any version is ok, the code is really straightforward
 
 **SGP30**: please note:
 - I found a library which turned out a little bit old (the latest versions from Adafruit can be found on their site). 
 - But because I am not used to all the dependencies of Adafruit and CircuitPython, I still uses that older version. 
-- Mainly because it works pretty much on its own with no specific dependencies. and it needed a small change, see contents.
+- Mainly because it works pretty much on its own with no specific dependencies and it needed a small change only, see contents.
 - I might switch to full-swing Adafruit in the future, though ;-)
 
 It needs a MQTT server to post the output of the sensor. Topics are SGP30 voor measurements and SGP30_mgt for internal info.
@@ -49,7 +50,7 @@ It needs a MQTT server to post the output of the sensor. Topics are SGP30 voor m
 
 **ESP-01**: 
 - Flash with Micropython
-- Copy all the files to the root of the device
+- Copy all the files to the root of the device  
 - Update the secrets.py to set your SSID and password and the mqtt server
 - Boot
 
@@ -63,10 +64,10 @@ If correctly wired, the electronics should post messages on mqtt:
 - Topic: SGP30, value: "t:<co2eq>:<tvov>" example: "t:400,5"  
 - Topic: SGP30_mgt: value: "m:<mem>:<cycle>" example: "m:20560,13"
 
-The SGP30_mgt was introduced to find a memory leak. After properly using the garbage collector, it works ok now.
+The topic SGP30_mgt was introduced to find a memory leak. After properly using the garbage collector, it works ok now.
 Internally it measures the amount of memory used and if more than 20k bytes, it starts gc. 
 The counter shows how many cycles before gc is started. 
-To make it fail safe, it reboots is cycle counter is 1 (I've never seen this happen).
+To make it fail safe, it reboots if cycle counter is 1 (I've never seen this happen).
   
 ## Help
 

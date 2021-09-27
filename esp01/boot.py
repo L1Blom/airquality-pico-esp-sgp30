@@ -8,26 +8,10 @@ import micropython
 import network
 import esp
 import secrets
-import wifimgr
 
 #esp.osdebug(None)
 import gc
 gc.collect()
-
-try:
-  import usocket as socket
-except:
-  import socket
-
-wlan = wifimgr.get_connection()
-
-if wlan is None:
-    print("Could not initialize the network connection.")
-    while True:
-        pass  # you shall not pass :D
-
-# Main Code goes here, wlan is a working network.WLAN(STA_IF) instance.
-print("ESP OK")
 
 ssid = secrets.ssid
 password = secrets.password

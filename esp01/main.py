@@ -45,7 +45,7 @@ while esp_mqtt.state == "uart":
     except OSError as e:
         esp_mqtt.sub_cb(esp_mqtt.topic_sub, b'repl')
         print("Error: "+e)
-#        esp_mqtt.restart_and_reconnect()
+        esp_mqtt.restart_and_reconnect()
         
     time.sleep(0.5)
 
